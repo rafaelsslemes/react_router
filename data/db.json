@@ -1,0 +1,30 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "name": "T-Shirt",
+            "price": 50.90
+        },
+        {
+            "id": 2,
+            "name": "Pants",
+            "price": 80.90
+        },
+        {
+            "id": 3,
+            "name": "Skirt",
+            "price": 20.50
+        },
+        {
+            "id": 4,
+            "name": "Hat",
+            "price": 19.35
+        },
+        {
+            "id": 5,
+            "name": "Short",
+            "price": 19.00
+        }
+    ]
+
+}

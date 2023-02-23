@@ -18,6 +18,11 @@ function App() {
           Learn React
         </a>
       </header>
+      <h1> React Router </h1>
+      <BrowserRouter>
+        <Route path='/' element={<Home/>} />
+      </BrowserRouter>
+     
     </div>
   );
 }
