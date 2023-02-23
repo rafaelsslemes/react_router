@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import { useFetch } from '../hooks/useFetch';
 import './Home.css';
 
@@ -15,6 +16,7 @@ const Home = () => {
           ? (data && data.map(product => (
             <li key={product.id}>
               <p>{product.name} R${product.price}</p>
+              <Link to={`/product/${product.id}`}>Details</Link>
             </li>
           )))
           : (<h2>{errorMsg}</h2>)
