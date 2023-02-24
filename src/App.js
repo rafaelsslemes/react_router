@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 import './App.css';
 import NavBar from './components/NavBar';
 import SearchForm from './components/SearchForm';
@@ -23,6 +23,7 @@ function App() {
           <Route path="/product/:id" element={<Product/>} />
           <Route path="/product/:id/info" element={<Info/>} />
           <Route path="/search" element={<Search/>} />
+          <Route path="/contact" element={<Navigate to='/about'/>} />
           <Route path="*" element={<NotFound/>} />
         </Routes>
       </BrowserRouter>
