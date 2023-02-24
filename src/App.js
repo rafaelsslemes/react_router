@@ -4,6 +4,7 @@ import NavBar from './components/NavBar';
 import About from './pages/About';
 import Home from './pages/Home';
 import Info from './pages/Info';
+import NotFound from './pages/NotFound';
 import Product from './pages/Product';
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
           <Route path="/about" element={<About/>} />
           <Route path="/product/:id" element={<Product/>} />
           <Route path="/product/:id/info" element={<Info/>} />
+          <Route path="*" element={<NotFound/>} />
         </Routes>
       </BrowserRouter>
      
