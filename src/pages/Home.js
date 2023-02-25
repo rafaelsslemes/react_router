@@ -1,6 +1,5 @@
-import React, { useContext } from 'react'
 import { Link } from 'react-router-dom';
-import { CounterContext } from '../context/CounterContext';
+import { useCounterContext } from '../hooks/useCounterContext';
 import { useFetch } from '../hooks/useFetch';
 import './Home.css';
 
@@ -9,7 +8,7 @@ const Home = () => {
   const backendURL = 'http://localhost:3000/products';
   const {data, loading, errorMsg} = useFetch(backendURL);
 
-  const {counter, setCounter} = useContext(CounterContext);
+  const {counter, setCounter} = useCounterContext();
 
   return (
     <div>
