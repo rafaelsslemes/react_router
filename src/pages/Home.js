@@ -1,3 +1,4 @@
+import { type } from '@testing-library/user-event/dist/type';
 import { Link } from 'react-router-dom';
 import { useCounterContext } from '../hooks/useCounterContext';
 import { useFetch } from '../hooks/useFetch';
@@ -11,11 +12,16 @@ const Home = () => {
 
   const {counter, setCounter} = useCounterContext();
 
-  const {color} = useTitleColorContext();
+  const {color, number, dispatch} = useTitleColorContext();
 
   return (
     <div>
       <h1 style={{color:color}}>Product List</h1>
+      <button onClick={()=> dispatch({type:"RED"})}>Red</button>
+      <button onClick={()=> dispatch({type:"BLUE"})}>Blue</button>
+      <button onClick={()=> dispatch({type:"GREEN"})}>Green</button>
+      <h2>{number}</h2>
+
       <ul className='products'>
         {errorMsg === null 
           ? (data && data.map(product => (
