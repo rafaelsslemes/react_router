@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useCounterContext } from '../hooks/useCounterContext';
 import { useFetch } from '../hooks/useFetch';
+import { useTitleColorContext } from '../hooks/useTitleColorContext';
 import './Home.css';
 
 const Home = () => {
@@ -10,9 +11,11 @@ const Home = () => {
 
   const {counter, setCounter} = useCounterContext();
 
+  const {color} = useTitleColorContext();
+
   return (
     <div>
-      <h1>Product List</h1>
+      <h1 style={{color:color}}>Product List</h1>
       <ul className='products'>
         {errorMsg === null 
           ? (data && data.map(product => (
